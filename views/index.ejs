@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>API Data</title>
+</head>
+<body>
+    <h1>List of all countries</h1>
+    <ul>
+        <% data.forEach(item => { %>
+            <li><a href="http://localhost:3000/details/<%= item.name.official %>"><%= item.name.official %></a> <img src="<%= item.flags.png %>" alt="country flag"/></li>
+        <% }); %>
+    </ul>
+</body>
+</html>

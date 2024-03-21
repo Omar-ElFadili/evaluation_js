@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/countryStyle.css"> <!-- Utilisation d'un chemin relatif -->
+    <title>Country Details</title>
+</head>
+<body>
+    <h1>Country Details</h1>
+    <div class="country-details">
+        <h2><%= data.name.common %></h2>
+        <ul>
+            <li><strong>Official Name:</strong> <%= data.name.official %></li>
+            <li><strong>Capital:</strong> <%= data.capital %></li>
+            <li><strong>Population:</strong> <%= data.population %></li>
+            <li><strong>Area:</strong> <%= data.area %> square kilometers</li>
+            <li><strong>Languages:</strong> <%= Object.values(data.languages).join(', ') %></li>
+            <li><strong>Region:</strong> <%= data.region %></li>
+            <li><strong>Subregion:</strong> <%= data.subregion %></li>
+            <li><strong>Flag:</strong> <img src="<%= data.flags.png %>" alt="Country Flag"></li>
+        </ul>
+    </div>
+</body>
+</html>
